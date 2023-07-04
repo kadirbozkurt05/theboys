@@ -129,7 +129,7 @@ h1{
     margin-bottom: 30px;
 }
 
-.deneme{
+.gangs-images{
     margin-left: 50px;
     background-image: url(gang/gang.png); 
     width: 500px; 
@@ -137,7 +137,7 @@ h1{
     transition: .6s;
 }
 
-.deneme:hover{
+.gangs-images:hover{
     background-image: url(seven/gang.png);
 }
 
