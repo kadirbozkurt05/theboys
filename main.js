@@ -5,3 +5,12 @@ var typed = new Typed('.text', {
     backDelay:100,
     loop: true
   });
+
+
+
+
+
+
+
+
+

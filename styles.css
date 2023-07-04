@@ -4,10 +4,13 @@
     font-family: 'poppins', sans-serif;
     margin: 0;
     padding: 0;
+    
 }
+
 
 body{
     color: #ededed;
+    background-color: rgb(20, 0, 147);
 }
 
 .header{
@@ -16,14 +19,11 @@ body{
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    
     background-color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    opacity: 0;
-    animation: slideRight .5s ease forwards;
 }
 
 .logo{
@@ -33,8 +33,7 @@ body{
     text-decoration: none;
     font-weight: 600;
     cursor: default;
-    opacity: 0;
-    animation: slideRight 1s ease forwards;
+
 }
 
 .navbar{
@@ -51,9 +50,6 @@ body{
     font-weight: 500;
     margin-left: 35px;
     transition: .3s;
-    opacity: 0;
-    animation: slideTop .5s ease forwards;
-    animation-delay: calc(.2s*var(--i));
     border: 1px solid white;
     padding: 10px;
     width: 170px;
@@ -69,11 +65,15 @@ section{
     position: relative;
     width: 100%;
     justify-content: space-between;
-    height: 100vh;
+    height: fit-content;
     background-color: rgb(20, 0, 147);
     display: flex;
     align-items: center;
-    padding: 70px 10% 0;
+    padding-top: 20px;
+    padding-left: 70px;
+    padding-right: 70px;
+    align-items: center;
+    margin-top: 50px;
 }
 
 .storyline-content{
@@ -83,25 +83,17 @@ section{
 .storyline-content h3{
     font-size: 32px;
     font-weight: 700;
-    opacity: 0;
-    animation: slideBottom .5s ease forwards;
-    animation-delay: .7s;
 }
 
-.storyline-content h1{
+h1{
     font-size: 56px;
     font-weight: 700;
-    margin: -3px 0;
-    opacity: 0;
-    animation: slideRight 1s ease forwards;
-    animation-delay: 1s;
+    display: block;
+    text-align: center;
 }
 
 .storyline-content p{
     font-size: 20px;
-    opacity: 0;
-    animation: slideLeft 1s ease forwards;
-    animation-delay: 1s;
 
 }
 
@@ -116,16 +108,13 @@ section{
     border-radius: 50%;
     background-color: gray;
     margin: 30px 15px 30px 0;
-    opacity: 0;
-    animation: slideLeft 1s ease forwards;
-    animation-delay: 1s;
     transition: .5s ease;
 
 }
 
 .storyline-chars a img:hover{
-    background:#0ef ;
-    color: black;
+    background-image: url(img/theboys.webp);
+    background-position: 50%;
     box-shadow: 0 0 20px #0ef;
 }
 
@@ -139,9 +128,6 @@ section{
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
-    opacity: 0;
-    animation: slideTop 1s ease forwards;
-    animation-delay: 2s;
     box-shadow: 0 0 5px #0ef,0 0 25px #0ef;
 }
 
@@ -154,88 +140,103 @@ section{
 }
 .storyline-content h3:nth-of-type(2){
     margin-bottom: 30px;
-    animation: slideTop 1s ease forwards;
-    animation-delay: .7s;
 }
 
-.storyline img{
+#storyline > img{
     width: 400px;
     height: 400px;
     margin-left: 50px;
+    background-color: transparent;
     border: 1px solid black;
     box-shadow: 0 0 5px #867474,0 0 25px #867474,0 0 50px #867474,0 0 100px #867474,0 0 200px #867474
 }
 
-.cast{
+#boys,#seven{
     display: block;
 }
 
 
-.cast img{
+#boys img{
     margin-right: 20px;
     width: 400px;
     height: 400px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: antiquewhite;
+    transition: .6s;
+
 }
-.cast p{
+#boys div:hover img{
+    background-image: url(img/theboys.webp);
+    background-position: 20%;
+    height: 500px;
+    width: 500px;
+    
+}
+#boys div:hover p{
+    font-size: 20px;
+}
+
+#boys p{
     margin-left: 20px;
 }
 
-#billy-butcher, #hughie-campbell,#mothers-milk,#frenchie,#kimiko {
+#billy-butcher, #hughie-campbell,#mothers-milk,#frenchie,#kimiko,.detail-content {
     display: flex;
     align-items: center;
 }
 
-.cast:nth-child(odd){
-    opacity: 0;
-    animation: slideRight 1s ease forwards;
-    animation-delay: 2s;
+td{
+    padding-left: 10px;
+}
+
+tr{
+    border-bottom: 1px solid white;
+}
+table{
+    border-collapse: collapse;
+    height: 400px;
+    margin-top: 50px;
+    position: relative;
+}
+
+.font-warning a{
+    font-weight: bold; 
+    color: yellow; 
+    font-style: italic;
+    text-decoration: none;
+}
+
+.font-warning:hover{
+    text-decoration-line: underline;
+}
+
+.seven-members div{
+    display: inline-block;
+}
+
+.seven-members img{
+    height: 200px;
+    transition:.6s;
+}
+.seven-members img:hover{
+    height: 250px;
+}
+
+#homelander-image{
+    height: 300px;
+}
+#homelander-image:hover{
+    height: 375px;
 }
 
 
-@keyframes slideRight{
-    0%{
-        transform: translateX(-100px);
-        opacity: 0;
-    }
 
-    100%{
-        transform: translateX(0px);
-        opacity: 1;
-    }
-}
 
-@keyframes slideLeft{
-    0%{
-        transform: translateX(100px);
-        opacity: 0;
-    }
 
-    100%{
-        transform: translateX(0px);
-        opacity: 1;
-    }
-}
+  
 
-@keyframes slideTop{
-    0%{
-        transform: translateY(100px);
-        opacity: 0;
-    }
 
-    100%{
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
 
-@keyframes slideBottom{
-    0%{
-        transform: translateY(-100px);
-        opacity: 0;
-    }
 
-    100%{
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
+
