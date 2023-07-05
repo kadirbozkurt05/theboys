@@ -18,21 +18,19 @@ body{
     text-decoration: none;
     font-weight: 600;
     cursor: default;
-    z-index: 10;
+    z-index: 2;
 
 }
 nav{
     position: fixed;
     width: 100%;
     top: 0;
-    /* for navbar to stick above element. if none then stick to top of screen*/
-    z-index:2; /* position absolute items to stay beind*/
+    z-index:1;
     text-align: right;
     vertical-align: middle;
     overflow: hidden;
     height: 60px;
     background-color: black;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 12px 10px -10px;
   }
 
 .navbar-items{
@@ -61,7 +59,7 @@ section{
     width: 100%;
     justify-content: space-between;
     height: fit-content;
-    background-color: rgb(20, 0, 147);
+    background-color: black;
     display: flex;
     align-items: center;
     padding-left: 70px;
@@ -136,12 +134,13 @@ h1{
 }
 
 
-#boys,#seven{
+#boys-section,#seven-section{
     display: block;
+    text-align: center;
 }
 
 
-#boys img{
+#boys-section img{
     margin-right: 20px;
     width: 400px;
     height: 400px;
@@ -151,18 +150,18 @@ h1{
     transition: .6s;
 
 }
-#boys div:hover img{
+#boys-section div:hover img{
     background-image: url(img/theboys.webp);
     background-position: 20%;
     height: 500px;
     width: 500px;
     
 }
-#boys div:hover p{
+#boys-section div:hover p{
     font-size: 20px;
 }
 
-#boys p{
+#boys-section p{
     margin-left: 20px;
 }
 
@@ -215,6 +214,30 @@ table{
     height: 375px;
 }
 
+#pollModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    right: 80px;
+    bottom: 80px;
+    width: fit-content;
+    height: fit-content;
+    overflow: hidden;
+  }
+
+  #poll-icon{
+    position: fixed;
+    height: 80px;
+    bottom:15px;
+    right: 15px;
+    padding: 10px;
+    border-radius: 50%;
+  }
+
+  #poll-icon:active{
+    opacity: .4;
+  }
+
 @media only screen and (max-width: 768px) {
 
     .logo{
@@ -239,19 +262,19 @@ table{
         padding-right: 10px;
     }
 
-    #boys > div{
+    #boys-section > div{
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    #boys img{
+    #boys-section img{
         order:1;
         margin-bottom: 10px;
         width: 100px;
         height: 100px;
     }
-    #boys p{
+    #boys-section p{
         order:2;
         font-size: small;
     }
@@ -262,7 +285,7 @@ table{
     }
 
 
-    #storyline img{
+    #storyline-section img{
         width: 50px;
         height: 50px;
     }
@@ -275,23 +298,29 @@ table{
     }
 
 
-    #boys div:hover img{
+    #boys-section div:hover img{
         width: 100px;
         height: 100px;
     }
-    #boys div:hover p{
+    #boys-section div:hover p{
         font-size: small;
     }
     .gangs-images{
         display: none;
     }
 
-    #seven img{
+    .seven-members{
+        text-align: center;
+        display: block;
+        text-align: center;
+    }
+
+    #seven-section img{
         height: 100px;
         width: 100px;
     }
 
-    #seven img:hover{
+    #seven-section img:hover{
         height: 100px;
         width: 100px;
     }
@@ -301,26 +330,4 @@ table{
     }
 }
 
-#myModal {
-    display: none;
-    position: fixed;
-    z-index: 10;
-    right: 80px;
-    bottom: 80px;
-    width: fit-content;
-    height: fit-content;
-    overflow: hidden;
-  }
 
-  #poll{
-    position: fixed;
-    height: 80px;
-    bottom:15px;
-    right: 15px;
-    padding: 10px;
-    border-radius: 50%;
-  }
-
-  #poll:active{
-    opacity: .4;
-  }

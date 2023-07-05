@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>The Boys Fan Page</title>
-        <meta lang="en">
         <link href="styles.css" rel="stylesheet">
-        <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
         
     </head>
     <body>
@@ -13,22 +14,22 @@
 
         <nav>
             <ul class="navbar-items">
-                <li><a href="#storyline">STORYLINE</a></li>
-                <li><a href="#boys" >THE BOYS</a></li>
-                <li><a href="#seven">THE SEVEN</a></li>
+                <li><a href="#storyline-section">STORYLINE</a></li>
+                <li><a href="#boys-section" >THE BOYS</a></li>
+                <li><a href="#seven-section">THE SEVEN</a></li>
             </ul>
         </nav>
 
-    <section id="storyline">
+    <section id="storyline-section">
         <div class="storyline-content">
             
             <h1>STORYLINE</h1><br>
-            <h3>The Boys is a <span class="text"></span> </h3>
+            <h3>The Boys is a <span class="typing-text"></span> </h3>
             <br>
-            <span class="font-warning"> <a href="#boys">The Boys</a> </span>  is an irreverent take on the superhero genre. It explores what happens when superheroes abuse their powers 
+            <span class="font-warning"> <a href="#boys-section">The Boys</a> </span>  is an irreverent take on the superhero genre. It explores what happens when superheroes abuse their powers 
             instead of using them for good. These mighty beings — who are popular as celebrities, as influential as politicians, 
             and as revered as gods — find themselves hunted by a non-powered group of vigilantes.
-            A CIA black-ops team, their job is to police, monitor and potentially stop <span class="font-warning"><a href="#seven">the Seven</a></span> , a group of vainglorious superheroes. 
+            A CIA black-ops team, their job is to police, monitor and potentially stop <span class="font-warning"><a href="#seven-section">the Seven</a></span> , a group of vainglorious superheroes. 
             They were founded by Billy Butcher, their current leader.
             This band of brothers is out to expose the corruption they believe the Seven represent. Although they may not have superpowers, 
             they do have a lot of "blue-collar grit and [a] willingness to fight dirty."
@@ -45,7 +46,7 @@
         
     </section>
 
-    <section id="boys">
+    <section id="boys-section">
         <h1>THE BOYS</h1><br>
         <div id="billy-butcher">
             <img src="gang/billybutcher.webp" alt="Billy-Butcher">
@@ -116,9 +117,9 @@
         </div>
     </section>
 
-    <section id="seven">
+    <section id="seven-section">
         <h1>THE SEVEN</h1><br>
-        <div class="seven-members" style="text-align: center; display: block;">
+        <div class="seven-members">
         <div class="seven-member"><img id="homelander-image" src="seven/homelander.webp" alt="homelander"><br>
             <h4 style="margin-bottom: 75px;">Homelander</h4>
         </div><br>
@@ -138,24 +139,22 @@
             <h4>Black Noire</h4>
         </div>
         
-        <div><img onclick="openModal" src="seven/translucent.png" alt="homelander"><br>
+        <div><img src="seven/translucent.png" alt="homelander"><br>
             <h4>Translucent</h4>
         </div>
           </div>
     </section>
     
-    <img id="poll" src="img/poll.jpeg" onclick="poll()" alt="poll">
+    <img id="poll-icon" src="img/poll.jpeg" onclick="poll()" alt="poll">
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+
     <script src="main.js"></script>
     <script src="quiz.js"></script>
     
-    <div class="modal" id="myModal">
+    <div class="poll-modal" id="pollModal">
         <div onclick="closeModal()" style="cursor: default;">X</div>
         <div data-tf-widget="arkNlcR6" data-tf-opacity="100" data-tf-hide-headers data-tf-inline-on-mobile data-tf-iframe-props="title=The Boys" data-tf-transitive-search-params data-tf-medium="snippet" style="width:100%;height:600px;"></div><script src="//embed.typeform.com/next/embed.js"></script>        <script>
       </script>
-      
-    
-    
-
         </body>
 </html>
 

@@ -1,7 +1,7 @@
 var modal;
 
 window.onload = function() {
-  modal = document.getElementById("myModal");
+  modal = document.getElementById("pollModal");
   poll();
 };
 
