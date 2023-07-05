@@ -3,7 +3,6 @@
     font-family: 'poppins', sans-serif;
     margin: 0;
     padding: 0;
-    
 }
 
 body{
@@ -70,9 +69,6 @@ section{
     align-items: center;
     padding-top: 65px;
 }
-
-
-
 
 .storyline-content{
     max-width: 600px;
@@ -219,7 +215,8 @@ table{
     height: 375px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
+
     .logo{
         display: none;
     }
@@ -238,6 +235,30 @@ table{
 
     section{
         padding-top: 40px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #boys > div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #boys img{
+        order:1;
+        margin-bottom: 10px;
+        width: 100px;
+        height: 100px;
+    }
+    #boys p{
+        order:2;
+        font-size: small;
+    }
+
+    .storyline-chars{
+        width: 100%;
+        text-align: center;
     }
 
 
@@ -253,17 +274,10 @@ table{
         font-size: small;
     }
 
-    #boys img{
-        width: 50px;
-        height: 50px;
-    }
-    #boys p{
-        font-size: small;
-    }
 
     #boys div:hover img{
-        width: 50px;
-        height: 50px;
+        width: 100px;
+        height: 100px;
     }
     #boys div:hover p{
         font-size: small;
@@ -291,8 +305,8 @@ table{
     display: none;
     position: fixed;
     z-index: 10;
-    right: 65px;
-    bottom: 65px;
+    right: 80px;
+    bottom: 80px;
     width: fit-content;
     height: fit-content;
     overflow: hidden;
@@ -300,21 +314,13 @@ table{
 
   #poll{
     position: fixed;
-    height: 60px;
-    bottom:5px;
-    right: 5px;
+    height: 80px;
+    bottom:15px;
+    right: 15px;
+    padding: 10px;
+    border-radius: 50%;
   }
 
-
-
-
-
-
-
-
-  
-
-
-
-
-
+  #poll:active{
+    opacity: .4;
+  }

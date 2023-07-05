@@ -1,8 +1,18 @@
+var modal;
+
+window.onload = function() {
+  modal = document.getElementById("myModal");
+  poll();
+};
+
 function poll() {
-    var modal = document.getElementById("myModal");
-    if (modal.style.display === "none") {
-      modal.style.display = "inline-block";
-    } else {
-      modal.style.display = "none";
-    }
+  if (modal.style.display === "none") {
+    modal.style.display = "inline-block";
+  } else {
+    closeModal();
   }
+}
+
+function closeModal(){
+    modal.style.display = "none";
+}
