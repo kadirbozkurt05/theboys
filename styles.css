@@ -7,74 +7,73 @@
     
 }
 
-
 body{
     color: #ededed;
     background-color: rgb(20, 0, 147);
 }
-
-.header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 10%;
-    background-color: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-}
-
 .logo{
-    position: relative;
+    position: fixed;
+    top: 15px;
+    left: 20px;
     font-size: 25px;
     color: #fff;
     text-decoration: none;
     font-weight: 600;
     cursor: default;
+    z-index: 10;
 
 }
+nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    /* for navbar to stick above element. if none then stick to top of screen*/
+    z-index:2; /* position absolute items to stay beind*/
+    text-align: right;
+    vertical-align: middle;
+    overflow: hidden;
+    height: 60px;
+    background-color: black;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 12px 10px -10px;
+  }
 
-.navbar{
-    position: absolute;
-    top:5px;
-    right:20px;
-}
+.navbar-items{
+    list-style-type: none; 
+    padding-right: 20px;
+  }
 
-.navbar a{
-    display: inline-block;
-    font-size: 25px;
-    color: #fff;
+.navbar-items li{
+    display:inline-block;
+  }
+
+.navbar-items li a{
+    display:block;
+    padding: 17px;
+    font-weight: 200;
+    font-size: 1.2em;
     text-decoration: none;
-    font-weight: 500;
-    margin-left: 35px;
-    transition: .3s;
-    border: 1px solid white;
-    padding: 10px;
-    width: 170px;
-    text-align: center;    
-}
+    color: #F8F9F9;
+  }
 
-.navbar a:hover{
-    color: black;
-    background-color: white;
+.navbar-items li a:hover{
+    color: lightblue;
 }
 
 section{
-    position: relative;
     width: 100%;
     justify-content: space-between;
     height: fit-content;
     background-color: rgb(20, 0, 147);
     display: flex;
     align-items: center;
-    padding-top: 20px;
     padding-left: 70px;
     padding-right: 70px;
     align-items: center;
-    margin-top: 50px;
+    padding-top: 65px;
 }
+
+
+
 
 .storyline-content{
     max-width: 600px;
@@ -221,6 +220,75 @@ table{
     height: 375px;
 }
 
+@media only screen and (max-width: 600px) {
+    .logo{
+        display: none;
+    }
+    nav{
+        text-align: center;
+        height: 30px;
+    }
+
+    .navbar-items li {
+        margin-bottom: 0; /* Yeni ekleyin: Öğeler arasına boşluk bırakın */
+      }
+      .navbar-items li a{
+        font-size: 12px;
+        padding: 5px;
+      }
+
+    section{
+        padding-top: 40px;
+    }
+
+
+    #storyline img{
+        width: 50px;
+        height: 50px;
+    }
+    
+    .storyline-content h3{
+        font-size: 20px;
+    }
+    .storyline-content{
+        font-size: small;
+    }
+
+    #boys img{
+        width: 50px;
+        height: 50px;
+    }
+    #boys p{
+        font-size: small;
+    }
+
+    #boys div:hover img{
+        width: 50px;
+        height: 50px;
+    }
+    #boys div:hover p{
+        font-size: small;
+    }
+    .gangs-images{
+        display: none;
+    }
+
+    #seven img{
+        height: 100px;
+        width: 100px;
+    }
+
+    #seven img:hover{
+        height: 100px;
+        width: 100px;
+    }
+
+    h1{
+        font-size: larger;
+    }
+    
+    
+}
 
 
 
