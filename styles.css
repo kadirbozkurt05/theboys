@@ -1,5 +1,4 @@
 *{
-    
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
     margin: 0;
@@ -286,9 +285,25 @@ table{
     h1{
         font-size: larger;
     }
-    
-    
 }
+
+#myModal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    right: 65px;
+    bottom: 65px;
+    width: fit-content;
+    height: fit-content;
+    overflow: hidden;
+  }
+
+  #poll{
+    position: fixed;
+    height: 60px;
+    bottom:5px;
+    right: 5px;
+  }
 
 
 
