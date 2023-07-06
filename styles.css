@@ -7,7 +7,7 @@
 
 body{
     color: #ededed;
-    background-color: rgb(20, 0, 147);
+    background-color: black;
 }
 .logo{
     position: fixed;
@@ -59,7 +59,6 @@ section{
     width: 100%;
     justify-content: space-between;
     height: fit-content;
-    background-color: black;
     display: flex;
     align-items: center;
     padding-left: 70px;
