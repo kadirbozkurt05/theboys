@@ -4,7 +4,7 @@
  */
 var modal;
 
-window.onload = function() {
+window.onload = function () {
   modal = document.getElementById("pollModal");
   poll();
 };
@@ -22,6 +22,6 @@ function poll() {
 /**
  * This function makes the modal invisible.
  */
-function closeModal(){
-    modal.style.display = "none";
+function closeModal() {
+  modal.style.display = "none";
 }
