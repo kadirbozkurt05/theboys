@@ -12,6 +12,20 @@ body {
   color: #ededed;
   background-color: black;
 }
+
+/*
+Some common attributes for the sections
+*/
+section {
+  justify-content: space-between; /*To make the elements horizantal with space between them*/
+  height: fit-content; /*Instead of giving random height, they will use their contents to give the height*/
+  display: flex;
+  padding-left: 70px;
+  padding-right: 70px;
+  align-items: center;
+  padding-top: 65px;
+}
+
 .logo {
   position: fixed; /*Logo will be the fixed on the top left all the time*/
   top: 15px;
@@ -23,20 +37,18 @@ body {
   cursor: default;
   z-index: 2; /*it will be over the other elements*/
 }
+
 nav {
   position: fixed; /*Navigation menu will be the fixed on the top all the time*/
   width: 100%;
   top: 0;
   z-index: 1; /*It will be under of the logo but the over of the other elements*/
   text-align: right;
-  /* vertical-align: middle; */
-  /*  overflow: hidden;*/
   height: 60px;
   background-color: black;
 }
 
 .navbar-items {
-  /* list-style-type: none; */
   padding-right: 20px;
 }
 
@@ -55,21 +67,6 @@ nav {
 
 .navbar-items li a:hover {
   color: lightblue;
-}
-
-/*
-Some common attributes for the sections
-*/
-section {
-  /* width: 100%; */
-  justify-content: space-between; /*To make the elements horizantal with space between them*/
-  height: fit-content; /*Instead of giving random height, they will use their contents to give the height*/
-  display: flex;
-  /*  align-items: center; */
-  padding-left: 70px;
-  padding-right: 70px;
-  align-items: center;
-  padding-top: 65px;
 }
 
 .storyline-content {
@@ -93,9 +90,6 @@ h1 {
 }
 
 .storyline-chars a img {
-  /* display: inline-flex; */
-  /*  justify-content: center; */
-  /* align-items: center; */
   width: 100px;
   height: 100px;
   background: transparent;
@@ -107,7 +101,7 @@ h1 {
 }
 
 .storyline-chars a img:hover {
-  background-image: url(img/theboys.webp);
+  background-image: url(https://kadir-bozkurt.000webhostapp.com/img/theboys.webp);
   background-position: 50%;
   box-shadow: 0 0 20px #0ef; /* to make images to glow outside*/
 }
@@ -118,7 +112,7 @@ h1 {
 /*To be able to switch the image with css when hover, used div instead of image. And made the background-image. */
 .gangs-images {
   margin-left: 50px;
-  background-image: url(gang/gang.png);
+  background-image: url(https://kadir-bozkurt.000webhostapp.com/gang/gang.png);
   width: 500px;
   height: 210px;
   transition: 1s;
@@ -126,7 +120,7 @@ h1 {
 
 /*when hover the backgroun image will switch*/
 .gangs-images:hover {
-  background-image: url(seven/gang.png);
+  background-image: url(https://kadir-bozkurt.000webhostapp.com/seven/gang.png);
 }
 
 #boys-section,
@@ -147,7 +141,7 @@ h1 {
 /*
 When hover the parent of the contents they will have some attributes*/
 #boys-section div:hover img {
-  background-image: url(img/theboys.webp);
+  background-image: url(https://kadir-bozkurt.000webhostapp.com/img/theboys.webp);
   background-position: 20%;
   height: 500px;
   width: 500px;
@@ -168,20 +162,6 @@ When hover the parent of the contents they will have some attributes*/
   display: flex;
   justify-content: space-between;
   align-items: center; /*in the flex display, to make elements in the middle vertically*/
-}
-
-td {
-  padding-left: 10px;
-}
-
-tr {
-  border-bottom: 1px solid white;
-}
-table {
-  border-collapse: collapse;
-  height: 400px;
-  margin-top: 50px;
-  position: relative;
 }
 
 .font-warning a {
@@ -219,6 +199,10 @@ This modal will use JS to be shown. It will be on the fixed position when it is 
 */
 #pollModal {
   display: none;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  color: black;
   position: fixed;
   z-index: 1;
   right: 80px;
@@ -227,6 +211,23 @@ This modal will use JS to be shown. It will be on the fixed position when it is 
   height: fit-content;
   overflow: hidden; /*To make sure the user will not see a scroll bar*/
 }
+
+#pollModal button{
+  width: 200px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: large;
+
+}
+
+.poll-modal div:first-child{
+  cursor: default; 
+  text-align: right; 
+  margin-bottom: 4px;
+}
+
 /*
 It will be fixed on the right bottom of the screen
 */
@@ -243,6 +244,23 @@ To give a click effect the opacity will be changed while clicking
 */
 #poll-icon:active {
   opacity: 0.4;
+}
+
+#poll-options img{
+  height: 50px;
+}
+
+#poll-results{
+  display: none;
+}
+#poll-button{
+  text-align: center;
+}
+
+footer{
+  margin-top: 100px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 /*
@@ -293,7 +311,6 @@ To give a click effect the opacity will be changed while clicking
   }
 
   .storyline-chars {
-    /* width: 100%;*/
     text-align: center;
   }
   #storyline-section img {
@@ -325,12 +342,6 @@ To give a click effect the opacity will be changed while clicking
   .gangs-images {
     display: none;
   }
-  /*
-    .seven-members{
-       text-align: center;
-       display: block; 
-    }
-*/
 
   #seven-section img {
     height: 100px;
